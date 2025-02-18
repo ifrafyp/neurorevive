@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/forgot.dart';
-import 'package:flutter_application_1/signup.dart';
+import 'package:neurorevive/forgot.dart';
+import 'package:neurorevive/signup.dart';
 import 'package:get/get.dart';
 
 class Login extends StatefulWidget {
