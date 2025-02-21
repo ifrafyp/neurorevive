@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ThoughtBridgePage extends StatelessWidget {
+  const ThoughtBridgePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

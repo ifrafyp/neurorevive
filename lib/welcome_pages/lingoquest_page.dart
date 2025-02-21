@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LingoQuestPage extends StatelessWidget {
+  const LingoQuestPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

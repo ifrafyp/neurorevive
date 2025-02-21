@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SocialConnectPage extends StatelessWidget {
+  const SocialConnectPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

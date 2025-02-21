@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class InsightTrackerPage extends StatelessWidget {
+  const InsightTrackerPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

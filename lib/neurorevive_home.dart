@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:neurorevive/welcome_pages/cognitherapist_page.dart';
+import 'package:neurorevive/welcome_pages/insight_tracker_page.dart';
+import 'package:neurorevive/welcome_pages/lingoquest_page.dart';
+import 'package:neurorevive/welcome_pages/neuroplay_page.dart';
+import 'package:neurorevive/welcome_pages/perceptoscan_page.dart';
+import 'package:neurorevive/welcome_pages/social_connect_page.dart';
+import 'package:neurorevive/welcome_pages/thoughtbridge_page.dart';
 
 class NeuroReviveHome extends StatelessWidget {
+  const NeuroReviveHome({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,13 +46,20 @@ class NeuroReviveHome extends StatelessWidget {
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
                 children: [
-                  _featureTile(context, Icons.videogame_asset, 'NeuroPlay'),
-                  _featureTile(context, Icons.people, 'Social Connect'),
-                  _featureTile(context, Icons.psychology, 'CogniTherapist'),
-                  _featureTile(context, Icons.school, 'Insight Tracker'),
-                  _featureTile(context, Icons.book, 'PerceptoScan'),
-                  _featureTile(context, Icons.event_note, 'LingoQuest'),
-                  _featureTile(context, Icons.group, 'ThoughtBridge'),
+                  _featureTile(context, Icons.videogame_asset, 'NeuroPlay',
+                      NeuroPlayPage()),
+                  _featureTile(context, Icons.people, 'Social Connect',
+                      SocialConnectPage()),
+                  _featureTile(context, Icons.psychology, 'CogniTherapist',
+                      CogniTherapistPage()),
+                  _featureTile(context, Icons.school, 'Insight Tracker',
+                      InsightTrackerPage()),
+                  _featureTile(
+                      context, Icons.book, 'PerceptoScan', PerceptoScanPage()),
+                  _featureTile(context, Icons.event_note, 'LingoQuest',
+                      LingoQuestPage()),
+                  _featureTile(context, Icons.group, 'ThoughtBridge',
+                      ThoughtBridgePage()),
                 ],
               ),
             ),
@@ -56,7 +72,8 @@ class NeuroReviveHome extends StatelessWidget {
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
             ),
-            Image.network('https://www.bing.com/th?id=OIP.nENQFcaqbYneoL_BI4wRiwHaGL&w=150&h=125&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2'),
+            Image.network(
+                'https://www.bing.com/th?id=OIP.nENQFcaqbYneoL_BI4wRiwHaGL&w=150&h=125&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2'),
 
             const Padding(
               padding: EdgeInsets.all(20),
@@ -72,18 +89,14 @@ class NeuroReviveHome extends StatelessWidget {
     );
   }
 
-  Widget _featureTile(BuildContext context, IconData icon, String title) {
+  Widget _featureTile(
+      BuildContext context, IconData icon, String title, Widget nextScreen) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Scaffold(
-              appBar: AppBar(title: Text(title)),
-              body: Center(
-                child: Text('Welcome to $title!', style: const TextStyle(fontSize: 24)),
-              ),
-            ),
+            builder: (context) => nextScreen,
           ),
         );
       },
@@ -112,6 +125,6 @@ class NeuroReviveHome extends StatelessWidget {
           ],
         ),
       ),
-    ); 
+    );
   }
 }

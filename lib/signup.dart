@@ -74,8 +74,10 @@ class _SignupState extends State<Signup> {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50),
-                child: Text("Sign Up", style: TextStyle(fontSize: 18, color: Colors.white)),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 12.0, horizontal: 50),
+                child: Text("Sign Up",
+                    style: TextStyle(fontSize: 18, color: Colors.white)),
               ),
             ),
           ],

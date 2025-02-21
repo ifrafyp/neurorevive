@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PerceptoScanPage extends StatelessWidget {
+  const PerceptoScanPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

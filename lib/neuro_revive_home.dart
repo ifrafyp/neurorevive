@@ -8,6 +8,8 @@ import 'welcome_pages/lingoquest_page.dart';
 import 'welcome_pages/thoughtbridge_page.dart';
 
 class NeuroReviveHome extends StatelessWidget {
+  const NeuroReviveHome({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
